@@ -1,17 +1,19 @@
+<p align='center'><img width="100" src='resources/icons/mipmap-xxxhdpi/icon.png'/></p>
+<h1 align="center">Vueder</h1>
+<p align="center">A minimal weather app</p>
+<br />
+<br />
 
-<img src="public/assets/images/logo.png" alt="Photon Logo" width="100" align="left" /><br><h1>&nbsp;&nbsp;Photon</h1><br>
 
-<img src="resources/mockups/mockup-both.png" alt="Photon Screenshot" width="400" />
+## About
 
-Meteor app to control <a href="https://store.particle.io/collections/photon" target="_blank">Photon</a>-connected lights.
+Vueder is a minimal weather app written in Meteor and is powered by <a href="https://openweathermap.org/" target="_blank">OpenWeatherMap's API</a>.
 
-### About
+<br />
 
-This project contains the source code for my personal Android application for controlling my lights. The lights are controlled using a <a href="https://store.particle.io/collections/photon" target="_blank">Photon</a> device and a relay. My lights are connected to the relay and this app triggers a function in the Photon to turn on/off the relay.
-
-The app is built with Meteor which allows me to compile an APK for my Android phone.
-
-👉🏻 For the Photon-side of things checkout the project here: [github.com/juangesino/lux](https://github.com/juangesino/lux).
+<div align="center">
+<img src="resources/mockups/mockup.png" alt="Mockup" width="400"/>
+</div>
 
 ## Setup
 
@@ -30,8 +32,8 @@ The app is built with Meteor which allows me to compile an APK for my Android ph
 2. **Clone Repository**
 
     ```sh
-    > git clone https://github.com/juangesino/photon.git
-    > cd photon
+    > git clone https://github.com/juangesino/vueder.git
+    > cd vueder
     ```
 
 3. **Install Dependencies**
@@ -50,11 +52,11 @@ The app is built with Meteor which allows me to compile an APK for my Android ph
 
 4. **Setup Keys**
 
-    In order for the application to connect with the Photon, we need to provide some auth key (the device ID and an access token).
+    In order for the application to use OpenWeatherMap's API, we need to provide an API key.
 
     Rename the file `/server/keys.js.example` to `/server/keys.js`.
 
-    Open the file and replace `<<OPEN-WEATHER-KEY>>` with your Open Weather Key.
+    Open the file and replace `<OPEN-WEATHER-KEY>` with your OpenWeatherMap key. You can get a key <a href="https://openweathermap.org/api" target="_blank">here</a>.
 
     For info on how to get these variables see <a href="https://docs.particle.io/guide/how-to-build-a-product/authentication/#access-tokens" target="_blank">these docs</a>.
 
@@ -78,25 +80,19 @@ The app is built with Meteor which allows me to compile an APK for my Android ph
 
 ## Deploy
 
-### Hardware
-
-This project requires my <a href="https://github.com/juangesino/lux" target="_blank">Lux</a> project. Go check it out here: <a href="https://github.com/juangesino/lux" target="_blank">github.com/juangesino/lux</a>.
-
 ### Server
 
 The meteor application requires a server. We can do this by deploying the server to Heroku for free.
 
 Follow <a href="https://medium.com/@leonardykris/how-to-run-a-meteor-js-application-on-heroku-in-10-steps-7aceb12de234#.lmg8s462o" target="_blank">these</a> steps to deploy the Meteor app on Heroku.
 
-After that we need to setup our two environment variables: `deviceId` and `accessToken`. To do so, we need to add the following Config Var to our Heroku application:
+After that we need to setup an environment variable for the API key. To do so, we need to add the following Config Var to our Heroku application:
 
 ```
-METEOR_SETTINGS = {"secrets": {"deviceId":"<DEVICE-ID>", "accessToken": "<ACCESS-TOKEN>"} }
+METEOR_SETTINGS = {"secrets": {"openWeatherKey":"<OPEN-WEATHER-KEY>"} }
 ```
 
-Where `<DEVICE-ID>` and `<ACCESS-TOKEN>` are the device ID and access token for the Photon device.
-
-👉🏻 For info on how to get these variables see <a href="https://github.com/juangesino/lux" target="_blank">github.com/juangesino/lux</a>.
+Where `<OPEN-WEATHER-KEY>` is your OpenWeatherMap API key.
 
 👉🏻 For info on how to set these variables in Heroku see <a href="https://devcenter.heroku.com/articles/config-vars#setting-up-config-vars-for-a-deployed-application" target="_blank">these docs</a>.
 
@@ -109,7 +105,7 @@ Where `<DEVICE-ID>` and `<ACCESS-TOKEN>` are the device ID and access token for 
 To build for Android run:
 
 ```sh
-> meteor build ../<PATH-TO-BUILD>/photon --debug --server=https://<YOUR-HEROKU-APP-NAME>.herokuapp.com/
+> meteor build ../<PATH-TO-BUILD>/vueder --debug --server=https://<YOUR-HEROKU-APP-NAME>.herokuapp.com/
 ```
 
 Replace `<PATH-TO-BUILD>` with the actual path where you want your build to be generated.
@@ -117,7 +113,7 @@ Replace `<YOUR-HEROKU-APP-NAME>` with the name of the Heroku app for your server
 
 ## Contributing
 
-1. Fork it ( https://github.com/juangesino/photon/fork )
+1. Fork it ( https://github.com/juangesino/vueder/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
@@ -125,4 +121,4 @@ Replace `<YOUR-HEROKU-APP-NAME>` with the name of the Heroku app for your server
 
 ## License
 
-See [MIT-LICENSE](https://github.com/juangesino/photon/blob/master/LICENSE).
+See [MIT-LICENSE](https://github.com/juangesino/vueder/blob/master/LICENSE).
