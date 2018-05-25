@@ -1,0 +1,33 @@
+<template name="home">
+
+  <br><br>
+
+  <div class="row">
+    <div class="col-xs-12 align-center">
+      <h1>{{getLocation}}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 align-center">
+      <i class="font-lg {{getIcon}}"></i>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 align-center">
+      <h1>{{getTemperature}}</h1>
+    </div>
+  </div>
+  <div class="row">
+    {{#if getMinTemperature}}
+    <div class="col-xs-6 align-center">
+      <h3><i class="fa fa-arrow-down"></i> {{getMinTemperature}}</h3>
+    </div>
+    {{/if}}
+    {{#if getMaxTemperature}}
+    <div class="col-xs-6 align-center">
+      <h3><i class="fa fa-arrow-up"></i> {{getMaxTemperature}}</h3>
+    </div>
+    {{/if}}
+  </div>
+
+</template>

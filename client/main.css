@@ -1,0 +1,110 @@
+textarea, input, button { outline: none !important; box-shadow:none !important; }
+textarea:focus, input:focus, button:focus { outline: none !important; box-shadow:none !important; }
+
+.row {
+  margin-top: 70px;
+}
+
+.font-lg {
+  font-size: 8em;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.sync-btn {
+  cursor: pointer;
+}
+
+td {
+  cursor: pointer;
+  color: #337ab7;
+}
+
+.btn-round {
+  display: inline-block;
+  padding: 5px 10px 5px 10px;
+  border-radius: 100%;
+  margin-bottom: 10px;
+}
+
+.btn-float {
+  position: fixed;
+  right: 20px;
+  bottom: 80px;
+  padding: 20px 25px 20px 25px;
+  border-radius: 100%;
+}
+
+.btn-selected {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+
+/* .btn:active, .btn:focus, .btn:hover, .btn:active:focus {
+  background-color: inherit;
+} */
+
+.container {
+  padding-bottom: 95px;
+}
+
+.text-accent {
+  color: #5868f9;
+}
+
+.btn-accent {
+  color: white;
+  background-color: #5868f9 !important;
+}
+
+.btn-accent:active, .btn-accent:hover, .btn-accent:focus {
+  color: white;
+  background-color: #5868f9 !important;
+  border: none !important;
+}
+
+.panel {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .5);
+}
+
+.panel-accent {
+  border-color: #5868f9;
+}
+
+.panel-accent > .panel-heading {
+    color: #eaedff;
+    background-color: #5868f9;
+    border-color: #5868f9;
+}
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+/* Vertical align modal */
+.vertical-alignment-helper {
+    display:table;
+    height: 100%;
+    width: 100%;
+    pointer-events:none; /* This makes sure that we can still click outside of the modal to close it */
+}
+.vertical-align-center {
+    width: 90%;
+    /* To center vertically */
+    display: table-cell;
+    vertical-align: middle;
+    pointer-events:none;
+}
+.modal-content {
+    /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+    width:inherit;
+    max-width:inherit; /* For Bootstrap 4 - to avoid the modal window stretching full width */
+    height:inherit;
+    /* To center horizontally */
+    margin: 0 auto;
+    pointer-events: all;
+}
