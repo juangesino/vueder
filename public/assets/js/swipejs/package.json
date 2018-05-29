@@ -1,0 +1,113 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "swipejs",
+        "scope": null,
+        "escapedName": "swipejs",
+        "name": "swipejs",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/juangesino/Developer/vueder"
+    ]
+  ],
+  "_from": "swipejs@latest",
+  "_id": "swipejs@2.2.11",
+  "_inCache": true,
+  "_location": "/swipejs",
+  "_nodeVersion": "8.9.1",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/swipejs-2.2.11.tgz_1512920797231_0.6776385887060314"
+  },
+  "_npmUser": {
+    "name": "lyfeyaj",
+    "email": "lyfeyaj@gmail.com"
+  },
+  "_npmVersion": "5.5.1",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "swipejs",
+    "scope": null,
+    "escapedName": "swipejs",
+    "name": "swipejs",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/swipejs/-/swipejs-2.2.11.tgz",
+  "_shasum": "3614b2c35f84aa0e1fd37221a5c6c6cf05899dae",
+  "_shrinkwrap": null,
+  "_spec": "swipejs",
+  "_where": "/Users/juangesino/Developer/vueder",
+  "author": {
+    "name": "Brad Birdsall"
+  },
+  "bugs": {
+    "url": "http://github.com/lyfeyaj/swipe/issues",
+    "email": "lyfeyaj@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Felix Liu",
+      "email": "lyfeyaj@gmail.com",
+      "url": "http://lyfeyaj.com/"
+    }
+  ],
+  "dependencies": {},
+  "description": "Swipe is the most accurate touch slider",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "eslint": "^3.11.1",
+    "eslint-plugin-react": "^6.7.1",
+    "grunt": "~0.4.5",
+    "grunt-babel": "^6.0.0",
+    "grunt-contrib-uglify": "~0.7.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-sass": "^1.0.0",
+    "load-grunt-tasks": "^3.5.2"
+  },
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-4PsROZcn+KHkWDiK3BZ6hHj0Z8YACKWa2th/WVmF48JObwWBR9717JWYql6XGCkYjGbow+QNsdgTkFmAdCmk5A==",
+    "shasum": "3614b2c35f84aa0e1fd37221a5c6c6cf05899dae",
+    "tarball": "https://registry.npmjs.org/swipejs/-/swipejs-2.2.11.tgz"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "gitHead": "67e4030fe1b0dd5619d6f1de3bc7615d3aefaf49",
+  "homepage": "http://lyfeyaj.github.io/swipe/",
+  "keywords": [
+    "swipe",
+    "slider",
+    "touch"
+  ],
+  "license": "MIT",
+  "main": "swipe.js",
+  "maintainers": [
+    {
+      "name": "lyfeyaj",
+      "email": "lyfeyaj@gmail.com"
+    }
+  ],
+  "name": "swipejs",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lyfeyaj/swipe.git"
+  },
+  "scripts": {
+    "lint": "eslint ./swipe.js"
+  },
+  "types": "types/swipe.d.ts",
+  "version": "2.2.11"
+}

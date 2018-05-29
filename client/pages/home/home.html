@@ -1,7 +1,20 @@
 <template name="home">
-
   <br><br>
 
+  <div id="slider" class="swipe">
+    <div class="swipe-wrap">
+      <div>
+        {{> currentWeather}}
+      </div>
+      <div>
+        {{> forecastWeather}}
+      </div>
+    </div>
+  </div>
+
+</template>
+
+<template name="currentWeather">
   <div class="row">
     <div class="col-xs-12 align-center">
       <h1>{{getLocation}}</h1>
@@ -29,5 +42,25 @@
     </div>
     {{/if}}
   </div>
+</template>
 
+<template name="forecastWeather">
+  <div class="row">
+    <div class="col-xs-12 align-center">
+      <h1>{{getLocation}}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <table class="table">
+        {{#each forecastList}}
+        <tr>
+          <th>{{getTime this}}</th>
+          <th><i class="{{getIcon this}}"></i></th>
+          <th>{{getTemperature this}}</th>
+        </tr>
+        {{/each}}
+      </table>
+    </div>
+  </div>
 </template>
