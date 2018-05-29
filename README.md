@@ -12,7 +12,7 @@ Vueder is a minimal weather app written in Meteor and is powered by <a href="htt
 <br />
 
 <div align="center">
-<img src="resources/mockups/mockup.png" alt="Mockup" width="400"/>
+<img src="resources/mockups/mockups.png" alt="Mockup" width="400"/>
 </div>
 
 ## Setup
